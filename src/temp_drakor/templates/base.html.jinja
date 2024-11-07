@@ -21,7 +21,7 @@
     <h2>{{link["title"]}}</h2>
     <ul>
         {% for episode in link['episodes'] %}
-        <li><a href='{{episode["link"]}}'> Episode {{episode['ep']}}</a></li>
+        <li><a href='{{episode["link"]}}' target="_blank"> Episode {{episode['ep']}}</a></li>
         {% endfor %}
     </ul>
     {% endfor %}
