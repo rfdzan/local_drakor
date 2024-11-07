@@ -1,0 +1,20 @@
+[project]
+name = "temp_drakor"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "heko", email = "91366057+hkohko@users.noreply.github.com"},
+]
+dependencies = [
+    "flask>=3.0.3",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+start = "flask --app src/temp_drakor/main run --host=0.0.0.0"
