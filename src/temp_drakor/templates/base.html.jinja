@@ -11,20 +11,18 @@
     <title>Drama Korea</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Link Drakor</h1>
     {%for link in links%}
-    <div class="card">
-        <h2>{{link["title"]}}</h2>
-        <ul>
-            {% for episode in link['episodes'] %}
-            <li><a href='{{episode["link"]}}'> Episode {{episode['ep']}}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
+    <p>{{link["title"]}}</p>
+    <ul>
+        {% for episode in link['episodes'] %}
+        <li><a href='{{episode["link"]}}'> Episode {{episode['ep']}}</a></li>
+        {% endfor %}
+    </ul>
     {% endfor %}
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
