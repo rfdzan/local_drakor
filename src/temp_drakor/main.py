@@ -10,6 +10,11 @@ def front_page():
     return render_template("base.html.jinja", links=links_dictionary)
 
 
+@app.route("/test")
+def test_page():
+    return render_template("test.html.jinja")
+
+
 def get_links() -> list[dict[str, list[dict[str, str]]]]:
     with open("links.json", "r") as links:
         return json.load(links)
